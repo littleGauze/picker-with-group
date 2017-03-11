@@ -10,7 +10,7 @@ Meteor.startup(() => {
     let registerRouters = Picker.setRoot('root').setGroups([
         {
             group: '/user',
-            method: 'GET',
+            method: 'GET', //default is POST
             routes: {
                 '/': function (params, req, res, next) {
                     res.end('this is from /user/');
@@ -38,7 +38,7 @@ Meteor.startup(() => {
             group: '/user',
             routes: {
                 '/': function (params, req, res, next) {
-                    res.end('this msg from server by [GET]');
+                    res.end('this msg from server by [POST]');
                 }
             }
         }
