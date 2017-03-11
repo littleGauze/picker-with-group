@@ -43,10 +43,10 @@ _.extend(Picker.constructor.prototype, {
             pickerIns.setPath(path);
             pickerIns[method] = pickerIns;
 
-            _.keys(routes).forEach(function (key) {
+            _.each(function (callback, key) {
                 let routePath = ['/', path, key].join('');
                 registerRoutes.push([method, routePath].join(' => '));
-                pickerIns.route(routePath, routes[key]);
+                pickerIns.route(routePath, callback);
             });
 
             if (subGroups) {
