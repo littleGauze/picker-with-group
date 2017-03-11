@@ -1,5 +1,9 @@
 # picker-with-group
 an simple encapsulation for meteorhacks:picker
+
+## how to use it
+meteor add littlegauze:picker-with-group
+
 ###exsample
 ```javascript
 Meteor.startup(() => {
